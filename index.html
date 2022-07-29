@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    
+     <main>
+      <div class="left">
+         <header>
+          <h2>Players</h2>
+          <h3 id="self" style="color : blue"></h3>
+          <p>Participants</p>
+         </header>
+         <ul>
+         </ul>
+      </div>
+      <div class="container">
+        <h1>Hunt the Ace</h1>
+       <div class="deck-of-card-container">
+         <img src="./images/AceSpades.png" alt="deck" class="A-img" id="a-card">
+         <div id="message"></div>
+       </div>
+
+       <div class="card-suffle">
+          <div class="card-suffle-img" id="a-card">
+            <img src="./images/card-AceSpades.png">
+            <img src="./images/card-back-Blue.png" id="hide-card-1">
+          </div>
+           <div class="card-suffle-img" id="j-card">
+            <!-- <img src="./images/card-AceSpades.png"> -->
+            <img src="./images/card-JackClubs.png">
+            <img src="./images/card-back-Blue.png" id="hide-card-2">
+          </div>
+           <div class="card-suffle-img" id="k-card">
+            <!-- <img src="./images/card-AceSpades.png"> -->
+            <img src="./images/card-KingHearts.png">
+            <img src="./images/card-back-Blue.png" id="hide-card-3">
+          </div>
+           <div class="card-suffle-img" id="q-card">
+               <img src="./images/card-QueenDiamonds.png">
+            <!-- <img src="./images/card-AceSpades.png"> -->
+            <img src="./images/card-back-Blue.png" id="hide-card-4">
+          </div>
+       </div>
+       <div class="actions">
+        <button id="suffle-btn">Play</button>
+        <button id="reset-btn">Reset</button>
+       </div>
+    </div>
+     </main>
+    <script src="http://localhost:5000/socket.io/socket.io.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
