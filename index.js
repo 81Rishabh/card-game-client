@@ -1,6 +1,6 @@
 // const { appendFile } = require("fs");
 
-const socket = io("http://localhost:5000");
+const socket = io("https://card-game-s.herokuapp.com");
 const suffleCard = document.querySelectorAll(".card-suffle-img");
 const suffleCardContainer = document.querySelector(".card-suffle");
 const ACard = document.getElementById("a-card");
