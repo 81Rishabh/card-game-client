@@ -1,176 +1,190 @@
 * {
-    box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding : 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+   background : rgb(255, 255, 255);
 }
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
-.container {
-    background-color: rgb(240, 240, 240);
-}
+/* .container {
+  background-color: rgb(240, 240, 240);
+} */
 
 .deck-of-card-container {
-   width : 50%;
-   margin: auto;
-   display: flex;
-   justify-content:center;
-   align-items: center;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .deck-of-card-container .A-img {
-    width : 80px;
-    height : 100px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgb(232, 232, 232);
+  width: 80px;
+  height: 100px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgb(232, 232, 232);
 }
 
 .card-suffle {
-    width : 60vw;
-    margin:2rem auto;
-    display: block;
-    height : 400px;
-    padding: 2rem;
-    display : flex;
-    justify-content: center;
-    align-items : center;
+  width: 60vw;
+  margin: 2rem auto;
+  display: block;
+  height: 400px;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-
+/* related to card-suffle */
+.frontdrop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  opacity: 0.9;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  color: #fff;
+  font-size: 2rem;
+}
 
 .card-suffle img {
-   height: 150px;
-   cursor: pointer;
-   
+  height: 150px;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
 }
 
 .card-suffle-img {
-    /* transform-style: preserve-3d; */
-    position : relative;
+  /* transform-style: preserve-3d; */
+  position: relative;
 }
 
 .card-suffle img:nth-child(1) {
-    /* backface-visibility: hidden; */
-    transform: rotateY('180deg');
- }
-
- 
-.card-suffle img:nth-child(2) {
-    position: absolute;
-    left : 0;
-    top : 0;
+  /* backface-visibility: hidden; */
+  transform: rotateY("180deg");
 }
 
+.card-suffle img:nth-child(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
 
 /* .card-suffle img:nth-child(2):hover{
     transform: rotateY(90deg);
     transition: transform .4s ease-in-out;
 } */
 
-
 .actions {
-    display:  flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-#suffle-btn , #reset-btn {
-    border : none;
-    outline : none;
-    background-color : rgb(29, 227, 29);
-    color: #fff;
-    width : 100px;
-    padding : .6rem;
-    cursor: pointer;
-    border-radius: 5px;
+#suffle-btn,
+#reset-btn {
+  border: none;
+  outline: none;
+  background-color: rgb(29, 227, 29);
+  color: #fff;
+  width: 100px;
+  padding: 0.6rem;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 #reset-btn {
-    background: whitesmoke;
-    margin-left: 10px;  
-    color: #000;    
-    border : 1px solid lightgrey;
+  background: whitesmoke;
+  margin-left: 10px;
+  color: #000;
+  border: 1px solid lightgrey;
 }
 
 #suffle-btn:hover {
-    transform : scale(.95);
-    transition: transform .4s ease-in-out;
+  transform: scale(0.95);
+  transition: transform 0.4s ease-in-out;
 }
 
 /* classList for scaling */
 .scale-down {
-  animation : scaledown .4s ease forwards;
+  animation: scaledown 0.4s ease forwards;
 }
 
 .scale-up {
-    animation : scaleUp 1s ease forwards;
-  }
-
-@keyframes scaledown {
-    from {
-        transform : scale(1);
-    }
-    to {
-        transform : translate(0px , -100px) scale(.6);
-    }
+  animation: scaleUp 1s ease forwards;
 }
 
+@keyframes scaledown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.6);
+  }
+}
 
 @keyframes scaleUp {
-    from {
-        transform : scale(.6);
-    }
-    to {
-        transform : translate(0 , 0) scale(1);
-    }
+  from {
+    transform: scale(0.6);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 #message {
-    text-align: center;
-    font-weight: 600;
-    background-color: #000;
-    margin: 1rem auto;
-    display : inline;
-    color: #fff;
-    /* padding: .5rem; */
+  text-align: center;
+  font-weight: 600;
+  background-color: #000;
+  margin: 1rem auto;
+  display: inline;
+  color: #fff;
+  /* padding: .5rem; */
 }
 
 main {
-    display: flex;
+  display: flex;
 }
 
-
 .left {
-    width : 20%;
-    height : 99.5vh;
-    background-color: whitesmoke;
+  width: 20%;
+  height: 99.5vh;
+  background-color: whitesmoke;
 }
 
 .left header {
-    padding: 1rem;
-    background-color: #fff;
+  padding: 1rem;
+  background-color: #fff;
 }
 
 .container {
-    width : 90%;
+  width: 90%;
 }
 
 .left ul {
-    padding : 0;
-    margin : 0;
-    
+  padding: 0;
+  margin: 0;
 }
 
 .left ul li {
-    list-style: none;
-    background-color: #fff;
-    padding : .5rem 0 .5rem 2rem;
-    border : 1px solid lightgrey;
-    text-align: left;
+  list-style: none;
+  background-color: #fff;
+  padding: 0.5rem 0 0.5rem 2rem;
+  border: 1px solid lightgrey;
+  text-align: left;
 }
