@@ -1,6 +1,10 @@
 // const { appendFile } = require("fs");
 
 const socket = io("https://card-game-s.herokuapp.com");
+<<<<<<< HEAD
+=======
+const suffleCard = document.querySelectorAll(".card-suffle-img");
+>>>>>>> e25afe92337bd138e8915cf5ed636ae83d2eb196
 const suffleCardContainer = document.querySelector(".card-suffle");
 const ACard = document.getElementById("a-card");
 const randomPosition = 100;
